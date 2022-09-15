@@ -1,0 +1,11 @@
+<div class="row my-5">
+  <button class="col mx-2 btn btn-primary" (click)="showAdd()">Add</button>
+  <button class="col mx-2 btn btn-primary" (click)="showList()">List</button>
+</div>
+
+<app-add-form
+  [ngClass]="{ hidden: state.activeTab !== 'addForm' }"
+></app-add-form>
+<app-contact-list
+  [ngClass]="{ hidden: state.activeTab !== 'contactList' }"
+></app-contact-list>

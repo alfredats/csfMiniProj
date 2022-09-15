@@ -1,0 +1,44 @@
+<div class="container border border-dark">
+  <div class="row border-bottom border-dark">
+    <div
+      class="col py-2 d-flex justify-content-center bg-secondary bg-opacity-25"
+    >
+      <span>List of Contacts</span>
+    </div>
+    <div class="row">
+      <table class="col mx-3 my-2 text-center">
+        <thead>
+          <tr class="border border-dark bg-secondary bg-opacity-25">
+            <th>Name</th>
+            <th>Mobile</th>
+            <th>Email</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr
+            class="border border-top-0 border-dark"
+            *ngFor="let c of contacts; let idx = index"
+          >
+            <td>
+              <span>
+                {{ c.name }}
+              </span>
+            </td>
+            <td>
+              <span>{{ c.mobile }}</span>
+            </td>
+            <td>
+              <span>{{ c.email }}</span>
+            </td>
+            <td>
+              <button class="btn btn-danger my-1" (click)="removeContact(idx)">
+                X
+              </button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
